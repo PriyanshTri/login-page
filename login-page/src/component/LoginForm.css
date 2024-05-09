@@ -1,0 +1,65 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background-color: #d9d9d9;
+  padding: 2rem;
+  box-sizing: border-box;
+  gap: 25px;
+  margin: 0 auto
+}
+
+.login-form h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.MuiTextField-root {
+  margin-bottom: 1rem;
+  /* Spacing between text fields */
+  width: 100%;
+  /* Ensure fields fill full width */
+}
+
+.MuiFormControlLabel-root {
+  margin-bottom: 1rem;
+  /* Spacing between checkbox and button */
+}
+
+.MuiButton-root {
+  width: 100%;
+  /* Make button fill full width */
+}
+
+/* Error text styling */
+.MuiFormHelperText-root.Mui-error {
+  color: red;
+}
+
+/* Snackbar styling */
+.MuiSnackbar-root {
+  /* Center snackbar at bottom of screen */
+  bottom: 0 !important;
+  left: unset !important;
+  right: unset !important;
+  width: 100%;
+  /* Span full width */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 1rem;
+  }
+
+  .MuiTextField-root {
+    margin-bottom: 0.5rem;
+  }
+
+  .MuiFormControlLabel-root {
+    margin-bottom: 0.5rem;
+  }
+}
