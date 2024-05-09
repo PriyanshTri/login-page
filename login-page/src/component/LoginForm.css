@@ -19,19 +19,15 @@
 
 .MuiTextField-root {
   margin-bottom: 1rem;
-  /* Spacing between text fields */
   width: 100%;
-  /* Ensure fields fill full width */
 }
 
 .MuiFormControlLabel-root {
   margin-bottom: 1rem;
-  /* Spacing between checkbox and button */
 }
 
 .MuiButton-root {
   width: 100%;
-  /* Make button fill full width */
 }
 
 /* Error text styling */
@@ -39,17 +35,7 @@
   color: red;
 }
 
-/* Snackbar styling */
-.MuiSnackbar-root {
-  /* Center snackbar at bottom of screen */
-  bottom: 0 !important;
-  left: unset !important;
-  right: unset !important;
-  width: 100%;
-  /* Span full width */
-}
-
-/* Media queries for responsiveness */
+/* using mediea query for responive design*/
 @media (max-width: 768px) {
   .login-form {
     padding: 1rem;

@@ -6,10 +6,10 @@ import Snackbar from "@mui/material/Snackbar";
 import "./LoginForm.css";
 
 const LoginForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [openSnackbar, setOpenSnackbar] = useState(false);
-  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [openSnackbar, setOpenSnackbar] = useState<boolean>(false);
+  const [snackbarMessage, setSnackbarMessage] = useState<string>("");
 
   const handleEmailChange = (event: {
     target: { value: React.SetStateAction<string> };
@@ -50,14 +50,12 @@ const LoginForm = () => {
   }) => {
     if (!password || !email) {
       event.preventDefault();
-      event.returnValue = "You have some unsaved changes, do you want to exit?";
-      return "You have some unsaved changes, do you want to exit?";
+      event.returnValue = "";
+      return "";
     }
   };
   useEffect(() => {
-    if (!password || !email) {
-      window.addEventListener("beforeunload", handleBeforeUnload);
-    }
+    window.addEventListener("beforeunload", handleBeforeUnload);
     return () => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
     };
